@@ -1,7 +1,7 @@
 package com.gentaliti.elasticsearch.service;
 
-import com.gentaliti.elasticsearch.repository.AccountRepository;
 import com.gentaliti.elasticsearch.dto.Filter;
+import com.gentaliti.elasticsearch.repository.AccountRepository;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MultiMatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
@@ -14,6 +14,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Account search service
+ *
+ * @author Gent Aliti <alitigenti@gmail.com/>
+ */
 @Service
 public class AccountSearchService {
     private AccountRepository accountRepository;

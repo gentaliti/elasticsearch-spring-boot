@@ -4,6 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Filter
+ *
+ * @author Gent Aliti <alitigenti@gmail.com/>
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

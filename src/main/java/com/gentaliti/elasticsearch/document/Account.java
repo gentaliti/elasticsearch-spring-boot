@@ -12,6 +12,11 @@ import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 import org.springframework.stereotype.Component;
 
+/**
+ * Account
+ *
+ * @author Gent Aliti <alitigenti@gmail.com/>
+ */
 @Data
 @Component
 @Builder

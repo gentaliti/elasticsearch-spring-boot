@@ -15,6 +15,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Search controller
+ *
+ * @author Gent Aliti <alitigenti@gmail.com/>
+ */
 @RestController("/accounts")
 public class SearchController {
     private AccountSearchService accountSearchService;
@@ -25,10 +30,9 @@ public class SearchController {
     }
 
     @GetMapping
-    public Page searchObjects(
-            @RequestParam(value = "q", required = false) String query,
-            @RequestParam(value = "filter", required = false) String filter,
-            @PageableDefault(value = 10, page = 0) Pageable pageable) {
+    public Page searchObjects(@RequestParam(value = "q", required = false) String query,
+                              @RequestParam(value = "filter", required = false) String filter,
+                              @PageableDefault(value = 10, page = 0) Pageable pageable) {
         return this.accountSearchService.search(query, this.map(filter), pageable);
     }
 
@@ -51,10 +55,10 @@ public class SearchController {
 
     private List<Filter> mapValues(String filter) {
         List<Filter> filters = new ArrayList<>();
+        // check if filter string is valid
         if (!filter.contains(":")) {
             return filters;
         }
-
         final String[] values = filter.split(":");
         if (values[1].contains(",")) {
             for (String f : values[1].split(",")) {
