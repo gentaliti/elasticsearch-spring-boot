@@ -6,10 +6,13 @@ Simple [Spring Boot](http://projects.spring.io/spring-boot/) with Elasticsearch 
 
 For building and running the application you need:
 
-- [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
-- [Maven 3](https://maven.apache.org)
+- [JDK 11](https://openjdk.java.net/projects/jdk/11/)
+- [Elasticsearch>6](https://www.elastic.co)
+- [Maven](https://maven.apache.org)
 
 ## Running the application locally
+
+First you need to adjust your Elasticsearch configurations in src/main/resources.
 
 There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.gentaliti.ElasticsearchApplication` class from your IDE.
 
@@ -18,7 +21,3 @@ Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/
 ```shell
 mvn spring-boot:run
 ```
-
-## Copyright
-
-Released under the Apache License 2.0. See the [LICENSE](https://github.com/codecentric/springboot-sample-app/blob/master/LICENSE) file.
